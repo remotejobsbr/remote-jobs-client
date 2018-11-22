@@ -1,1 +1,13 @@
-{}
+{
+    "version": 2,
+    "name": "remotejobsbr",
+    "builds": [
+        {
+            "src": "server/index.js",
+            "use": "@now/node-server"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "production"
+    }
+}
