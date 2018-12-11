@@ -1,65 +1,243 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        remote-jobs-client
-      </h1>
-      <h2 class="subtitle">
-        Agregador de vagas de trabalho remoto para área de T.I e afins...
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <div class="pageIndex">
+    <div class="abf">
+      <header class="container">
+        <h1 class="headerTitle">
+          <logo class="logo"/>
+          Remote Jobs BR
+        </h1>
+
+        <img
+          class="background-image"
+          src="~/assets/remote-jobs-header.jpg"
+          alt="Foto de fundo com homem mexendo no computador">
+      </header>
+      <section class="slogan-container container">
+        <h1 class="title">
+          Acesse Diversas Vagas,<br>
+          Totalmente Grátis e<br>
+          Open Source.</h1>
+
+        <p class="product-explanation">
+          Com <strong>Remote Jobs BR</strong>, você tem acesso à vagas de <strong>trabalho remoto</strong> <br>
+          de várias áreas, totalmente grátis através de um repositório <br>
+          <strong>Open Source</strong>
+        </p>
+
+        <button class="button">
+          Ver Vagas
+        </button>
+      </section>
+      <div class="abf-bottom container">
+        <div class="abs-tip">
+          <img
+            src="~/assets/icons/search.svg"
+            alt="lupa">
+          Busque as vagas da sua área
+        </div>
+        <div class="abs-tip">
+          <img
+            src="~/assets/icons/list.svg"
+            alt="lupa">
+          Escolha a vaga que mais se encaixa em seu perfil
+        </div>
+        <div class="abs-tip">
+          <img
+            src="~/assets/icons/message.svg"
+            alt="lupa">
+          Entre em contato direto com o anunciante da vaga
+        </div>
       </div>
     </div>
-  </section>
+
+    <section class="jobFieldSection container">
+      <h1 class="title">Escolha sua Área de Atuação</h1>
+
+      <div class="jobFieldRow">
+        <div class="card jobFieldCard">
+          <img
+            src="~/assets/mobile.svg"
+            alt="Mobile">
+
+          <h2>Desenvolvimento Mobile</h2>
+
+          <p>Desenvolvimento mobile para Android e IOS usando ferramentas como Java, Kotlin, Swift, React Native, etc...</p>
+        </div>
+
+        <div class="card jobFieldCard">
+          <img
+            src="~/assets/front-end.svg"
+            alt="Mobile">
+
+          <h2>Desenvolvimento Front-End</h2>
+
+          <p>Desenvolvimento Front-End usando ferramentas como Javascript, React, Vue, Angular, Elm, etc...</p>
+        </div>
+
+        <div class="card jobFieldCard">
+          <img
+            src="~/assets/back-end.svg"
+            alt="Mobile">
+
+          <h2>Desenvolvimento Back-End</h2>
+
+          <p>Desenvolvimento Back-End usando ferramentas como Java, C#, Ruby, NodeJS, Python, etc...</p>
+        </div>
+      </div>
+
+      <p class="primaryTextTip">Mais áreas em breve...</p>
+    </section>
+
+    <site-footer />
+  </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import SiteFooter from '~/components/SiteFooter.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    SiteFooter
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style lang="scss">
+.pageIndex {
+  .abf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-top: 2em;
+  }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  .logo {
+    z-index: 999;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    @media screen and (max-width: 660px) {
+      margin-top: 20rem;
+    }
+  }
 
-.links {
-  padding-top: 15px;
+  .headerTitle {
+    font-size: 0;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-height: calc(100vh - 5.5rem);
+    max-width: calc(100vw - 22rem);
+    object-fit: scale-down;
+    z-index: -1;
+    min-width: 26rem;
+  }
+
+  .slogan-container {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.18rem;
+    color: #4d4d4d;
+  }
+
+  .product-explanation {
+    font-size: 0.75rem;
+    color: #858585;
+    margin: 2.18rem 0;
+  }
+
+  .abf-bottom {
+    @media screen and (min-width: 1050px) {
+      height: 5.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .abs-tip {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    width: 17.5rem;
+    margin: 1rem 0;
+
+    img {
+      margin-right: 0.31rem;
+    }
+  }
+
+  .jobFieldSection {
+    padding: 2rem;
+
+    .title {
+      font-size: 1.9rem;
+      text-align: center;
+    }
+  }
+
+  .card {
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.08);
+    border-radius: 1.31rem;
+    padding: 2.5rem 1.43rem;
+  }
+
+  .jobFieldRow {
+    margin-top: 5.75rem;
+
+    @media screen and (min-width: 950px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .jobFieldCard {
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: 950px) {
+      width: 16.5rem;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      height: 9.5rem;
+      width: 85%;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 3rem;
+      margin-bottom: 1.7rem;
+      text-align: center;
+      color: #4d4d4d;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 0.75rem;
+      color: #aaaaaa;
+
+      @media screen and (max-width: 950px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .primaryTextTip {
+    text-align: center;
+    margin: 1.5rem;
+    color: #4fe38a;
+    font-size: 0.75rem;
+  }
 }
 </style>

@@ -4,10 +4,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Lato', 'Source Sans Pro', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -24,32 +23,30 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 80%;
+  max-width: 90rem;
+
+  @media screen and (max-width: 1150px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 997px) {
+    width: 95%;
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.button {
+  background: transparent;
+  color: #1e91c3;
+  border-color: #1e91c3;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 1rem 3.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: 0;
 }
 </style>
