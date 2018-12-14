@@ -165,7 +165,7 @@ export default {
     display: flex;
     align-items: center;
     font-size: 0.7rem;
-    width: 17.5rem;
+    max-width: 17.5rem;
     margin: 1rem 0;
 
     img {
@@ -174,6 +174,7 @@ export default {
   }
 
   .jobFieldSection {
+    margin-top: 2.5rem;
     padding: 2rem;
 
     .title {
