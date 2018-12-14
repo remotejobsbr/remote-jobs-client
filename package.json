@@ -1,7 +1,7 @@
 {
-  "name": "remote-jobs-client",
+  "name": "remotejobsbr",
   "version": "1.0.0",
-  "description": "Agregador de vagas de trabalho remoto para área de T.I e afins...",
+  "description": "Acesse Diversas Vagas, Totalmente Grátis e Open Source. Com Remote Jobs BR, você tem acesso à vagas de trabalho remoto de várias áreas, totalmente grátis através de um repositório Open Source",
   "author": "Roberto Oliveira",
   "private": true,
   "scripts": {
