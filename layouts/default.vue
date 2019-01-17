@@ -38,15 +38,30 @@ html {
   }
 }
 
+.card {
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.08);
+  border-radius: 1.31rem;
+  padding: 2.5rem 1.43rem;
+}
+
 .button {
   background: transparent;
   color: #1e91c3;
-  border-color: #1e91c3;
+  border: 1px solid #1e91c3;
   font-size: 0.75rem;
   font-weight: bold;
   padding: 1rem 3.75rem;
   border-radius: 0.5rem;
   cursor: pointer;
   outline: 0;
+
+  &.buttonSmall {
+    font-size: 0.625rem;
+    padding: 0.5625rem 1.3125rem;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 </style>
