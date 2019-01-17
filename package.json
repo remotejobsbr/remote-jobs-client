@@ -14,9 +14,13 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
+    "axios-cache-adapter": "^2.1.1",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
-    "nuxt": "^2.0.0"
+    "moment": "^2.23.0",
+    "nuxt": "^2.0.0",
+    "ramda": "^0.26.1",
+    "vue-scrollto": "^2.13.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

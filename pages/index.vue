@@ -2,10 +2,14 @@
   <div class="pageIndex">
     <div class="abf">
       <header class="container">
-        <h1 class="headerTitle">
-          <logo class="logo"/>
-          Remote Jobs BR
-        </h1>
+        <nuxt-link
+          to="/"
+          exact>
+          <h1 class="headerTitle">
+            <logo class="logo"/>
+            Remote Jobs BR
+          </h1>
+        </nuxt-link>
 
         <img
           class="background-image"
@@ -24,7 +28,12 @@
           <strong>Open Source</strong>
         </p>
 
-        <button class="button">
+        <button
+          v-scroll-to="{
+            el: '#choose-your-field',
+            container: 'body'
+          }"
+          class="button">
           Ver Vagas
         </button>
       </section>
@@ -50,39 +59,47 @@
       </div>
     </div>
 
-    <section class="jobFieldSection container">
+    <section
+      id="choose-your-field"
+      class="jobFieldSection container">
       <h1 class="title">Escolha sua Área de Atuação</h1>
 
       <div class="jobFieldRow">
-        <div class="card jobFieldCard">
-          <img
-            src="~/assets/mobile.svg"
-            alt="Mobile">
+        <nuxt-link to="/mobile">
+          <div class="card jobFieldCard">
+            <img
+              src="~/assets/mobile.svg"
+              alt="Mobile">
 
-          <h2>Desenvolvimento Mobile</h2>
+            <h2>Desenvolvimento Mobile</h2>
 
-          <p>Desenvolvimento mobile para Android e IOS usando ferramentas como Java, Kotlin, Swift, React Native, etc...</p>
-        </div>
+            <p>Desenvolvimento mobile para Android e IOS usando ferramentas como Java, Kotlin, Swift, React Native, etc...</p>
+          </div>
+        </nuxt-link>
 
-        <div class="card jobFieldCard">
-          <img
-            src="~/assets/front-end.svg"
-            alt="Mobile">
+        <nuxt-link to="/frontend">
+          <div class="card jobFieldCard">
+            <img
+              src="~/assets/front-end.svg"
+              alt="Mobile">
 
-          <h2>Desenvolvimento Front-End</h2>
+            <h2>Desenvolvimento Front-End</h2>
 
-          <p>Desenvolvimento Front-End usando ferramentas como Javascript, React, Vue, Angular, Elm, etc...</p>
-        </div>
+            <p>Desenvolvimento Front-End usando ferramentas como Javascript, React, Vue, Angular, Elm, etc...</p>
+          </div>
+        </nuxt-link>
 
-        <div class="card jobFieldCard">
-          <img
-            src="~/assets/back-end.svg"
-            alt="Mobile">
+        <nuxt-link to="/backend">
+          <div class="card jobFieldCard">
+            <img
+              src="~/assets/back-end.svg"
+              alt="Mobile">
 
-          <h2>Desenvolvimento Back-End</h2>
+            <h2>Desenvolvimento Back-End</h2>
 
-          <p>Desenvolvimento Back-End usando ferramentas como Java, C#, Ruby, NodeJS, Python, etc...</p>
-        </div>
+            <p>Desenvolvimento Back-End usando ferramentas como Java, C#, Ruby, NodeJS, Python, etc...</p>
+          </div>
+        </nuxt-link>
       </div>
 
       <p class="primaryTextTip">Mais áreas em breve...</p>
@@ -181,12 +198,6 @@ export default {
       font-size: 1.9rem;
       text-align: center;
     }
-  }
-
-  .card {
-    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.08);
-    border-radius: 1.31rem;
-    padding: 2.5rem 1.43rem;
   }
 
   .jobFieldRow {
