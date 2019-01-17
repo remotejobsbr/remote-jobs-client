@@ -12,9 +12,47 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
-      { hid: 'description', name: 'revisit', content: '4 days' },
+      { hid: 'revisit', name: 'revisit', content: '4 days' },
       { hid: 'lang', name: 'language', content: 'Portuguese' },
-      { hid: 'lang', name: 'author', content: 'Roberto Oliveira' },
+      { hid: 'author', name: 'author', content: 'Roberto Oliveira' },
+      // Twitter
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: pkg.description
+      },
+      // Open Graph
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: pkg.description
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content:
+          'https://raw.githubusercontent.com/remotejobsbr/remote-jobs-client/master/assets/remote-jobs-social-media.png'
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: 'https://remotejobsbr.com'
+      },
+      {
+        hid: 'og:site_name',
+        name: 'og:site_name',
+        content: 'Remote Jobs BR'
+      },
+      {
+        hid: 'og:locale',
+        name: 'og:locale',
+        content: 'pr_BR'
+      },
+      {
+        hid: 'og:type',
+        name: 'og:type',
+        content: 'website'
+      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Lato:400,700'
@@ -36,7 +74,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/scrollto'],
+  plugins: ['~/plugins/scrollto', { src: '~plugins/ga.js', ssr: false }],
 
   /*
   ** Nuxt.js modules

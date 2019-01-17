@@ -36,7 +36,32 @@ import VacanciesTemplate from '~/components/VacanciesTemplate.vue'
 export default {
   head() {
     return {
-      title: `Vagas em ${this.pageName} - Remote Jobs BR`
+      title: `Vagas em ${this.pageName} - Remote Jobs BR`,
+      meta: [
+        // <!-- Schema.org for Google -->
+        {
+          hid: 'itempropname',
+          itemprop: 'name',
+          content: `Vagas em ${this.pageName} - Remote Jobs BR`
+        },
+        // <!-- Twitter -->
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: `Vagas em ${this.pageName} - Remote Jobs BR`
+        },
+        // <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: `Vagas em ${this.pageName} - Remote Jobs BR`
+        }
+      ]
     }
   },
   components: {
