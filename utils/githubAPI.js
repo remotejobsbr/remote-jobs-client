@@ -1,8 +1,9 @@
 // Unauthenticated request per minute: max 10
 
-import { flatten } from 'ramda'
+import { flatten, sort } from 'ramda'
 import axios from 'axios'
 import { setupCache } from 'axios-cache-adapter'
+import moment from '~/utils/momentLocale'
 
 const cache = setupCache({
   maxAge: 15 * 60 * 1000
@@ -62,7 +63,12 @@ export const fetchJobsByCategory = category =>
       )
     )
     .then(flatten)
-    .then(res => console.log(res) || res)
+    .then(
+      sort(
+        (a, b) =>
+          moment(b.created_at).valueOf() - moment(a.created_at).valueOf()
+      )
+    )
     .catch(console.error)
 
 export const fetchJob = (repositoryName, issueId) => {

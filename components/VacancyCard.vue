@@ -7,6 +7,7 @@
         class="userAvatar">
       <div>
         <h1 class="title">{{ vacancy.title }}</h1>
+        <h1 class="subtitle">Postado {{ moment(vacancy.created_at).fromNow() }}</h1>
       </div>
     </div>
     <div class="bottom">
@@ -34,6 +35,7 @@
 
 <script>
 import ServiceLogo from '~/components/ServiceLogo.vue'
+import moment from '~/utils/momentLocale'
 
 export default {
   components: {
@@ -50,6 +52,9 @@ export default {
       const remoteRegex = /(remote|remoto)/gi
       return this.vacancy.labels.filter(label => !remoteRegex.test(label.name))
     }
+  },
+  methods: {
+    moment
   }
 }
 </script>
@@ -77,7 +82,17 @@ export default {
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 0.6875rem;
+    text-align: justify;
+    color: #c4c4c4;
   }
 
   .bottom {
