@@ -7,7 +7,7 @@
         class="userAvatar">
       <div>
         <h1 class="title">{{ vacancy.title }}</h1>
-        <h1 class="subtitle">Postado {{ moment(vacancy.created_at).fromNow() }}</h1>
+        <h2 class="subtitle">Postado {{ moment(vacancy.created_at).fromNow() }}</h2>
       </div>
     </div>
     <div class="bottom">
@@ -27,24 +27,38 @@
       </div>
 
       <nuxt-link
-        :to="`/jobs/${$route.params.category}/${vacancy.service_name}/${vacancy.id}`"
-        class="button buttonSmall">Ver Vaga</nuxt-link>
+        v-if="full"
+        :to="`/${$route.params.category}`"
+        exact
+        class="button buttonSmall">Voltar</nuxt-link>
+    </div>
+    <div
+      v-if="full"
+      class="vacancyCardContent">
+      <vue-markdown>{{ removeComments(vacancy.body) }}</vue-markdown>
     </div>
   </div>
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown'
 import ServiceLogo from '~/components/ServiceLogo.vue'
 import moment from '~/utils/momentLocale'
 
 export default {
   components: {
-    ServiceLogo
+    ServiceLogo,
+    VueMarkdown
   },
   props: {
     vacancy: {
       type: Object,
       required: true
+    },
+    // Show the full data of a vacancy
+    full: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -54,7 +68,8 @@ export default {
     }
   },
   methods: {
-    moment
+    moment,
+    removeComments: text => text.replace(/<!--(.|\n|\t|\r)*?-->/gi, '')
   }
 }
 </script>
@@ -128,6 +143,53 @@ export default {
 
   .buttonSmall {
     min-width: 90px;
+  }
+
+  .vacancyCardContent {
+    padding: 1rem 0 1rem 3rem;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+    color: #4d4d4d;
+
+    p {
+      margin: 0.6rem 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 37px;
+      font-size: 16px;
+      color: #4d4d4d;
+    }
+
+    h1,
+    h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+      margin: 1.3rem 0 1rem;
+    }
+
+    a {
+      color: #1e91c3;
+      font-weight: bold;
+    }
+
+    img {
+      display: block;
+      max-width: 90%;
+      max-height: 500px;
+      object-fit: contain;
+      margin: 1rem 0;
+    }
   }
 }
 </style>

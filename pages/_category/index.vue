@@ -1,75 +1,44 @@
 <template>
-  <div class="pageCategory">
-    <div class="container mainLayout">
-      <header>
-        <nav class="mainNav">
-          <nuxt-link
-            to="/"
-            exact>
-            <logo class="logo" />
-          </nuxt-link>
+  <vacancies-template class="pageCategory">
+    <div class="content">
+      <img
+        class="topImage"
+        src="~/assets/remote-jobs-header.jpg"
+        alt="Foto de fundo com homem mexendo no computador">
 
-          <h1 class="navTitle">Áreas de Atuação:</h1>
+      <h1 class="pageTitle">{{ pageName }}</h1>
 
-          <ul class="menu">
-            <li>
-              <nuxt-link
-                class="menuItem"
-                to="/mobile">Mobile</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link
-                class="menuItem"
-                to="/frontend">Front-End</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link
-                class="menuItem"
-                to="/backend">Back-End</nuxt-link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-      <section class="content">
-        <img
-          class="topImage"
-          src="~/assets/remote-jobs-header.jpg"
-          alt="Foto de fundo com homem mexendo no computador">
-
-        <h1 class="pageTitle">{{ pageName }}</h1>
-
-        <div v-if="!vacancies">
-          <vacancy-card-placeholder class="vacancyContainer" />
-          <vacancy-card-placeholder class="vacancyContainer" />
-          <vacancy-card-placeholder class="vacancyContainer" />
-        </div>
-        <div v-else>
+      <div v-if="!vacancies">
+        <vacancy-card-placeholder class="vacancyContainer" />
+        <vacancy-card-placeholder class="vacancyContainer" />
+        <vacancy-card-placeholder class="vacancyContainer" />
+      </div>
+      <div v-else>
+        <nuxt-link
+          v-for="vacancy in vacancies"
+          :key="vacancy.id"
+          :to="`/jobs/${$route.params.category}/${vacancy.service_name}/${vacancy.id}`">
           <vacancy-card
-            v-for="vacancy in vacancies"
-            :key="vacancy.id"
             :vacancy="vacancy"
             class="vacancyCard"/>
-        </div>
-      </section>
+        </nuxt-link>
+      </div>
     </div>
-
-    <site-footer />
-  </div>
+  </vacancies-template>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import SiteFooter from '~/components/SiteFooter.vue'
 import VacancyCard from '~/components/VacancyCard.vue'
 import VacancyCardPlaceholder from '~/components/VacancyCardPlaceholder.vue'
+import VacanciesTemplate from '~/components/VacanciesTemplate.vue'
 
 export default {
   components: {
-    Logo,
     SiteFooter,
     VacancyCard,
-    VacancyCardPlaceholder
+    VacancyCardPlaceholder,
+    VacanciesTemplate
   },
   validate({ params }) {
     const allowedCategories = /(frontend|backend|mobile)/
@@ -96,12 +65,12 @@ export default {
 
 <style lang="scss">
 .pageCategory {
-  .mainLayout {
-    display: flex;
+  .content {
+    margin-top: 70px;
+    flex: 1;
 
-    & > header {
-      margin-right: 3.1rem;
-      width: 15.5rem;
+    @media screen and (min-width: 979px) {
+      margin-top: 400px;
     }
   }
 
@@ -112,49 +81,10 @@ export default {
     height: 400px;
     max-width: 50%;
     object-fit: contain;
-  }
 
-  .mainNav {
-    position: fixed;
-  }
-
-  .logo {
-    padding-top: 2em;
-  }
-
-  .navTitle {
-    color: #4d4d4d;
-    font-size: 1rem;
-    margin: 3.1rem 0 0.68rem;
-  }
-
-  .menu {
-    padding: 0;
-
-    li {
-      list-style: none;
+    @media screen and (max-width: 979px) {
+      display: none;
     }
-  }
-
-  .menuItem {
-    font-size: 1rem;
-    font-weight: bold;
-    width: 15rem;
-    padding: 0.4rem 1.1rem;
-    color: #535461;
-    margin-bottom: 0.68rem;
-    display: inline-block;
-  }
-
-  .nuxt-link-active {
-    background: #1e91c3;
-    border-radius: 0.37rem;
-    color: #fff;
-  }
-
-  .content {
-    margin-top: 400px;
-    flex: 1;
   }
 
   .pageTitle {

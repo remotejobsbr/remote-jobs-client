@@ -62,7 +62,8 @@
 
         <a
           class="repositoryLink"
-          href="#">
+          href="https://github.com/remotejobsbr/remote-jobs-client#remote-jobs-client"
+          target="_blank">
           <img
             src="~/assets/github-link.svg"
             alt="Link para o repositório">

@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <section
+    <nav
       id="choose-your-field"
       class="jobFieldSection container">
       <h1 class="title">Escolha sua Área de Atuação</h1>
@@ -103,7 +103,7 @@
       </div>
 
       <p class="primaryTextTip">Mais áreas em breve...</p>
-    </section>
+    </nav>
 
     <site-footer />
   </div>
