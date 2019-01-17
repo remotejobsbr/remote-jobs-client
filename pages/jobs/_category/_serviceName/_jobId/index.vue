@@ -18,6 +18,11 @@ import VacancyCardPlaceholder from '~/components/VacancyCardPlaceholder.vue'
 import VacanciesTemplate from '~/components/VacanciesTemplate.vue'
 
 export default {
+  head() {
+    return {
+      title: `${this.vacancy.title || 'Não encontrado'} - Remote Jobs BR`
+    }
+  },
   components: {
     SiteFooter,
     VacancyCard,

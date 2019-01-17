@@ -12,6 +12,9 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
+      { hid: 'description', name: 'revisit', content: '4 days' },
+      { hid: 'lang', name: 'language', content: 'Portuguese' },
+      { hid: 'lang', name: 'author', content: 'Roberto Oliveira' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Lato:400,700'
