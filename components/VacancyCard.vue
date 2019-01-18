@@ -93,7 +93,6 @@ export default {
 
   .title {
     color: #4d4d4d;
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -101,7 +100,6 @@ export default {
   }
 
   .subtitle {
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -130,7 +128,6 @@ export default {
     background: #4fe38a;
     color: #fff;
     border-radius: 1.25rem;
-    font-family: Lato;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -147,7 +144,6 @@ export default {
 
   .vacancyCardContent {
     padding: 1rem 0 1rem 3rem;
-    font-family: Lato;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -164,7 +160,6 @@ export default {
     h4,
     h5,
     h6 {
-      font-family: Lato;
       font-style: normal;
       font-weight: bold;
       line-height: 37px;
