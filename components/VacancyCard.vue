@@ -125,11 +125,11 @@ export default {
   }
 
   .label {
-    background: #4fe38a;
+    background: #55ac78;
     color: #fff;
     border-radius: 1.25rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: normal;
     font-size: 0.75rem;
     text-align: justify;
