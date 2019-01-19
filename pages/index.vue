@@ -253,7 +253,7 @@ export default {
 
     p {
       text-align: justify;
-      font-size: 0.75rem;
+      font-size: 0.875rem;
       color: #aaaaaa;
 
       @media screen and (max-width: 950px) {
