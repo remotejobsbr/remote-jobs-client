@@ -81,18 +81,24 @@ export default {
 
 <style lang="scss">
 .componentSiteFooter {
+  margin-top: 3.5rem;
   position: relative;
   background-color: #1e91c3;
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   padding-top: 1rem;
-  padding-bottom: 6.25rem;
+  padding-bottom: 1.2rem;
+  overflow: hidden;
+
+  @media screen and (max-width: 764px) {
+    padding-bottom: 6.5rem;
+  }
 
   .author {
     display: flex;
     justify-content: center;
-    margin-bottom: 3.8rem;
-    font-size: 0.65rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.75rem;
     font-weight: normal;
 
     img {
@@ -125,6 +131,7 @@ export default {
     margin: 1.5rem 0 0;
     padding: 0 0 0 1rem;
     border-left: 1px solid #fff;
+    font-size: 0.6875rem;
 
     li {
       list-style: none;
@@ -148,8 +155,8 @@ export default {
 
   .repositoryLink {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -5px;
+    bottom: -5px;
   }
 }
 </style>
