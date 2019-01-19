@@ -37,26 +37,26 @@
           Ver Vagas
         </button>
       </section>
-      <div class="abf-bottom container">
+      <section class="abf-bottom container">
         <div class="abs-tip">
           <img
             src="~/assets/icons/search.svg"
             alt="lupa">
-          Busque as vagas da sua área
+          <h1>Busque as vagas da sua área</h1>
         </div>
         <div class="abs-tip">
           <img
             src="~/assets/icons/list.svg"
             alt="lupa">
-          Escolha a vaga que mais se encaixa em seu perfil
+          <h1>Escolha a vaga que mais se encaixa em seu perfil</h1>
         </div>
         <div class="abs-tip">
           <img
             src="~/assets/icons/message.svg"
             alt="lupa">
-          Entre em contato direto com o anunciante da vaga
+          <h1>Entre em contato direto com o anunciante da vaga</h1>
         </div>
-      </div>
+      </section>
     </div>
 
     <nav
@@ -147,7 +147,7 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    max-height: calc(100vh - 5.5rem);
+    max-height: calc(100vh - 11.25rem);
     max-width: calc(100vw - 22rem);
     object-fit: scale-down;
     z-index: -1;
@@ -164,29 +164,46 @@ export default {
   }
 
   .product-explanation {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: #858585;
     margin: 2.18rem 0;
   }
 
   .abf-bottom {
-    @media screen and (min-width: 1050px) {
-      height: 5.5rem;
+    @media screen and (min-width: 800px) {
+      height: 11.25rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
+    @media screen and (max-width: 800px) {
+      margin: 2rem 0;
+    }
   }
 
   .abs-tip {
-    display: flex;
-    align-items: center;
-    font-size: 0.7rem;
-    max-width: 17.5rem;
-    margin: 1rem 0;
+    margin: 3rem 0;
+    text-align: center;
+
+    @media screen and (min-width: 800px) {
+      margin: 1rem 0;
+      max-width: 15rem;
+    }
 
     img {
       margin-right: 0.31rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-weight: normal;
+      color: #4d4d4d;
+      font-size: 1.25rem;
+
+      @media screen and (min-width: 800px) {
+        font-size: 0.875rem;
+      }
     }
   }
 
