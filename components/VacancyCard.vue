@@ -140,15 +140,19 @@ export default {
 
   .buttonSmall {
     min-width: 90px;
+    text-align: center;
   }
 
   .vacancyCardContent {
-    padding: 1rem 0 1rem 3rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     font-size: 16px;
     color: #4d4d4d;
+
+    @media screen and (min-width: 764px) {
+      padding: 1rem 0 1rem 3rem;
+    }
 
     p {
       margin: 0.6rem 0;
@@ -176,6 +180,7 @@ export default {
     a {
       color: #1e91c3;
       font-weight: bold;
+      word-break: break-all;
     }
 
     img {
