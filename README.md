@@ -43,12 +43,12 @@ Depois disso basta apenas iniciar o projeto através do script de start do npm:
 yarn dev
 ```
 
-## Rodando os Testes
+## Rodando os Testes (em breve)
 
 É usado o Jest para os testes. Basta rodar:
 
 ```bash
-npm run test
+yarn run test
 ```
 Caso esteja escrevendo testes, use a flag de `watch`:
 
@@ -56,14 +56,14 @@ Caso esteja escrevendo testes, use a flag de `watch`:
 npm run test -- --watch
 ```
 
-### Estilo de Código
+### Estilo de Código (em breve)
 
 É usado ESLint com o padrão `Standard`. Há hooks de git que verificam o padrão e rodam testes a cada commit.
 
 Para rodar o comando de lint:
 
 ```
-npm run lint
+yarn run lint
 ```
 
 ## Contribuição
@@ -73,7 +73,7 @@ PS: A documentação poderia ser em inglês, mas o objetivo é manter este proje
 
 Por favor, leia [CONTRIBUTING.md](./CONTRIBUTING.md) para detalhes do nosso código de conduta e processo para submissão de Pull Requests.
 
-## Autor
+## Comunidade
 
 * **Roberto Oliveira** - *Idealizador*
 
