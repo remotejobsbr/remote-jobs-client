@@ -73,6 +73,11 @@ PS: A documentação poderia ser em inglês, mas o objetivo é manter este proje
 
 Por favor, leia [CONTRIBUTING.md](./CONTRIBUTING.md) para detalhes do nosso código de conduta e processo para submissão de Pull Requests.
 
+## Contribuidores
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## Autor
 
 * **Roberto Oliveira** - *Idealizador*
