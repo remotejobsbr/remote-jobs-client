@@ -36,6 +36,11 @@ html {
   @media screen and (max-width: 997px) {
     width: 95%;
   }
+
+  @media screen and (max-width: 700px) {
+    width: 98%;
+    padding: 0 1rem;
+  }
 }
 
 .card {

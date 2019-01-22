@@ -93,7 +93,6 @@ export default {
 
   .title {
     color: #4d4d4d;
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -101,7 +100,6 @@ export default {
   }
 
   .subtitle {
-    font-family: Lato;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -127,12 +125,11 @@ export default {
   }
 
   .label {
-    background: #4fe38a;
+    background: #55ac78;
     color: #fff;
     border-radius: 1.25rem;
-    font-family: Lato;
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     line-height: normal;
     font-size: 0.75rem;
     text-align: justify;
@@ -143,16 +140,19 @@ export default {
 
   .buttonSmall {
     min-width: 90px;
+    text-align: center;
   }
 
   .vacancyCardContent {
-    padding: 1rem 0 1rem 3rem;
-    font-family: Lato;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     font-size: 16px;
     color: #4d4d4d;
+
+    @media screen and (min-width: 764px) {
+      padding: 1rem 0 1rem 3rem;
+    }
 
     p {
       margin: 0.6rem 0;
@@ -164,7 +164,6 @@ export default {
     h4,
     h5,
     h6 {
-      font-family: Lato;
       font-style: normal;
       font-weight: bold;
       line-height: 37px;
@@ -181,6 +180,7 @@ export default {
     a {
       color: #1e91c3;
       font-weight: bold;
+      word-break: break-all;
     }
 
     img {
