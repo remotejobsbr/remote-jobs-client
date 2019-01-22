@@ -86,6 +86,8 @@ export default {
   .serviceLogo img {
     height: 2rem;
     width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
     margin-right: 1rem;
     object-fit: cover;
     border-radius: 50%;
