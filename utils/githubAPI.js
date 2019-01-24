@@ -6,7 +6,7 @@ import { setupCache } from 'axios-cache-adapter'
 import moment from '~/utils/momentLocale'
 
 const cache = setupCache({
-  maxAge: 15 * 60 * 1000
+  maxAge: 25 * 60 * 1000
 })
 
 const instance = axios.create({

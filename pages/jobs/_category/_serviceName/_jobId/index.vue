@@ -19,8 +19,10 @@ import VacanciesTemplate from '~/components/VacanciesTemplate.vue'
 
 export default {
   head() {
+    const partialTitle = (this.vacancy && this.vacancy.title) || 'Buscando...'
+
     return {
-      title: `${this.vacancy.title || 'Não encontrado'} - Remote Jobs BR`
+      title: `${partialTitle} - Remote Jobs BR`
     }
   },
   components: {
@@ -39,9 +41,9 @@ export default {
   },
   computed: {
     vacancy() {
-      return this.$store.state.jobs[this.$route.params.category].find(
-        job => job.id === Number(this.$route.params.jobId)
-      )
+      const vacancies = this.$store.state.jobs[this.$route.params.category]
+      const byJobId = job => job.id === Number(this.$route.params.jobId)
+      return vacancies && vacancies.find(byJobId)
     },
     pageName() {
       return {
@@ -49,6 +51,13 @@ export default {
         backend: 'Back-End',
         mobile: 'Mobile'
       }[this.$route.params.category]
+    }
+  },
+  mounted() {
+    if (!this.vacancy) {
+      this.$store.dispatch('fetchJobs', {
+        category: this.$route.params.category
+      })
     }
   }
 }
