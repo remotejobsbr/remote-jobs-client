@@ -89,6 +89,13 @@ export default {
         mobile: 'Mobile'
       }[this.$route.params.category]
     }
+  },
+  mounted() {
+    if (!this.vacancies) {
+      this.$store.dispatch('fetchJobs', {
+        category: this.$route.params.category
+      })
+    }
   }
 }
 </script>
