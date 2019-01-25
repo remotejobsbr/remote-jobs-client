@@ -28,6 +28,11 @@
                 to="/backend">Back-End</nuxt-link>
             </li>
           </ul>
+
+          <section>
+            <h1 class="facebookLikeTitle">Curta nossa página no Facebook <br>e receba vagas por lá também:</h1>
+            <facebook-like-button />
+          </section>
         </nav>
       </header>
 
@@ -43,13 +48,15 @@ import Logo from '~/components/Logo.vue'
 import SiteFooter from '~/components/SiteFooter.vue'
 import VacancyCard from '~/components/VacancyCard.vue'
 import VacancyCardPlaceholder from '~/components/VacancyCardPlaceholder.vue'
+import FacebookLikeButton from '~/components/FacebookLikeButton.vue'
 
 export default {
   components: {
     Logo,
     SiteFooter,
     VacancyCard,
-    VacancyCardPlaceholder
+    VacancyCardPlaceholder,
+    FacebookLikeButton
   },
   validate({ params }) {
     const allowedCategories = /(frontend|backend|mobile)/
@@ -158,6 +165,13 @@ export default {
 
   .vacancyCard {
     margin-bottom: 1.8rem;
+  }
+
+  .facebookLikeTitle {
+    color: #4d4d4d;
+    font-size: 0.85rem;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: normal;
   }
 }
 </style>

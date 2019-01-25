@@ -87,7 +87,7 @@ export default {
   color: #fff;
   font-size: 0.75rem;
   padding-top: 1rem;
-  padding-bottom: 1.2rem;
+  padding-bottom: 1rem;
   overflow: hidden;
 
   @media screen and (max-width: 764px) {
@@ -97,7 +97,7 @@ export default {
   .author {
     display: flex;
     justify-content: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     font-size: 0.75rem;
     font-weight: normal;
 
