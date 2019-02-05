@@ -36,14 +36,22 @@ export default {
     return allowedCategories.test(params.category)
   },
   fetch({ store, params }) {
-    const { category } = params
-    return store.dispatch('fetchJobs', { category })
+    const { category, serviceName, jobId } = params
+    return store.dispatch('fetchJob', {
+      category,
+      serviceName,
+      jobNumber: jobId
+    })
   },
   computed: {
     vacancy() {
       const vacancies = this.$store.state.jobs[this.$route.params.category]
       const byJobId = job => job.id === Number(this.$route.params.jobId)
-      return vacancies && vacancies.find(byJobId)
+      const byIssueNumber = job =>
+        job.number === Number(this.$route.params.jobId)
+      const byIdOrNumber = job => byJobId(job) || byIssueNumber(job)
+
+      return vacancies && vacancies.find(byIdOrNumber)
     },
     pageName() {
       return {
