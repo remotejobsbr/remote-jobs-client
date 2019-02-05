@@ -17,7 +17,7 @@
         <nuxt-link
           v-for="vacancy in vacancies"
           :key="vacancy.id"
-          :to="`/jobs/${$route.params.category}/${vacancy.service_name}/${vacancy.id}`">
+          :to="`/jobs/${$route.params.category}/${vacancy.service_name}/${vacancy.number}`">
           <vacancy-card
             :vacancy="vacancy"
             class="vacancyCard"/>

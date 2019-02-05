@@ -16,12 +16,20 @@
           :service-name="vacancy.service_name"
           class="serviceLogo" />
 
-        <div class="labels">
+        <div
+          v-if="vacancy.state !== 'closed'"
+          class="labels"
+        >
           <div
             v-for="label in labels"
             :key="label.id"
             class="label">
             {{ label.name }}
+          </div>
+        </div>
+        <div v-else>
+          <div class="label label-warning">
+            Vaga Encerrada
           </div>
         </div>
       </div>
@@ -138,6 +146,10 @@ export default {
     text-transform: uppercase;
     padding: 0.55rem 0.8125rem;
     margin: 0.375rem 0.75rem 0.375rem 0;
+  }
+
+  .label-warning {
+    background: #af4444;
   }
 
   .buttonSmall {

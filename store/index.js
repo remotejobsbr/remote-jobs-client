@@ -1,5 +1,5 @@
 import Vuex from 'vuex'
-import { fetchJobsByCategory } from '~/utils/githubAPI'
+import { fetchJobsByCategory, fetchJob } from '~/utils/githubAPI'
 
 const createStore = () => {
   return new Vuex.Store({
@@ -20,6 +20,11 @@ const createStore = () => {
         return fetchJobsByCategory(category).then(jobs =>
           commit('setJobsByCategory', { category, jobs })
         )
+      },
+      fetchJob({ commit, dispatch }, { category, serviceName, jobNumber }) {
+        return fetchJob(serviceName, jobNumber)
+          .then(job => commit('setJobsByCategory', { category, jobs: [job] }))
+          .catch(dispatch.bind(dispatch, 'fetchJobs', { category }))
       }
     }
   })

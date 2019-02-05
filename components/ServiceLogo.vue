@@ -26,7 +26,7 @@
       alt="Vaga de PHP Dev BR"
       class="logoImage">
     <img
-      v-else-if="serviceName === 'reactbrasil'"
+      v-else-if="serviceName === 'react-brasil'"
       src="~/assets/react-brasil-logo.png"
       alt="Vaga de React BR"
       class="logoImage">
