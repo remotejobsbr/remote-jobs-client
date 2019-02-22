@@ -21,7 +21,7 @@ Estamos iniciando repositórios para **vagas remotas** na área de Design e UX:
 
 ## Iniciando
 
-Para usar: Acesse o [Remote Jobs](https://remotejobbr.github.io/)
+Para usar: Acesse o [Remote Jobs](https://remotejobsbr.github.io/)
 
 Para rodar em sua máquina: Faça um fork do nosso projeto.
 
