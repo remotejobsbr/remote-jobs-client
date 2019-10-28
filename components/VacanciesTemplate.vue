@@ -147,7 +147,7 @@ export default {
   }
 
   .nuxt-link-active {
-    background: #1e91c3;
+    background: #1a7ca7;
     border-radius: 0.37rem;
     color: #fff;
   }
@@ -172,6 +172,10 @@ export default {
     font-size: 0.85rem;
     margin: 1.5rem 0 0.5rem;
     font-weight: normal;
+  }
+
+  iframe {
+    width: 100%;
   }
 }
 </style>

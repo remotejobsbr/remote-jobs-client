@@ -7,6 +7,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'pt-BR'
+    },
     title: 'Remote Jobs BR',
     meta: [
       { charset: 'utf-8' },

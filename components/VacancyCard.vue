@@ -113,9 +113,9 @@ export default {
     font-style: normal;
     font-weight: bold;
     line-height: normal;
-    font-size: 0.6875rem;
+    font-size: 0.8rem;
     text-align: justify;
-    color: #c4c4c4;
+    color: #717171;
   }
 
   .bottom {
@@ -135,7 +135,7 @@ export default {
   }
 
   .label {
-    background: #55ac78;
+    background: #277547;
     color: #fff;
     border-radius: 1.25rem;
     font-style: normal;
@@ -192,7 +192,7 @@ export default {
     }
 
     a {
-      color: #1e91c3;
+      color: #1c7faa;
       font-weight: bold;
       word-break: break-all;
     }
