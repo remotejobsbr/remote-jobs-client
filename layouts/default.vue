@@ -14,6 +14,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: #fbfbfb;
 }
 
 *,
@@ -44,6 +45,7 @@ html {
 }
 
 .card {
+  background-color: #fff;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.08);
   border-radius: 1.31rem;
   padding: 2.5rem 1.43rem;
@@ -51,9 +53,9 @@ html {
 
 .button {
   background: transparent;
-  color: #1e91c3;
-  border: 1px solid #1e91c3;
-  font-size: 0.75rem;
+  color: #1a7ca7;
+  border: 1px solid #187da9;
+  font-size: 0.9rem;
   font-weight: bold;
   padding: 1rem 3.75rem;
   border-radius: 0.5rem;
@@ -61,12 +63,17 @@ html {
   outline: 0;
 
   &.buttonSmall {
-    font-size: 0.625rem;
+    font-size: 0.8rem;
     padding: 0.5625rem 1.3125rem;
   }
 }
 
 a {
   text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+  max-width: 80ch;
 }
 </style>

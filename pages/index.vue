@@ -13,7 +13,7 @@
 
         <img
           class="background-image"
-          src="~/assets/remote-jobs-header.jpg"
+          src="~/assets/remote-jobs-header.png"
           alt="Foto de fundo com homem mexendo no computador">
       </header>
       <section class="slogan-container container">
@@ -152,6 +152,7 @@ export default {
     object-fit: scale-down;
     z-index: -1;
     min-width: 26rem;
+    mix-blend-mode: multiply;
   }
 
   .slogan-container {
@@ -164,8 +165,8 @@ export default {
   }
 
   .product-explanation {
-    font-size: 0.875rem;
-    color: #858585;
+    font-size: 1rem;
+    color: #717171;
     margin: 2.18rem 0;
   }
 
@@ -202,7 +203,7 @@ export default {
       font-size: 1.25rem;
 
       @media screen and (min-width: 800px) {
-        font-size: 0.875rem;
+        font-size: 1rem;
       }
     }
   }
@@ -223,16 +224,23 @@ export default {
     @media screen and (min-width: 950px) {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    a {
+      width: calc(100% / 3 - 40px);
     }
   }
 
   .jobFieldCard {
     cursor: pointer;
+    height: 100%;
     user-select: none;
     margin-bottom: 2rem;
+    width: 100%;
 
     @media screen and (min-width: 950px) {
-      width: 16.5rem;
+      padding-bottom: 0;
     }
 
     img {
@@ -253,8 +261,8 @@ export default {
 
     p {
       text-align: justify;
-      font-size: 0.875rem;
-      color: #aaaaaa;
+      font-size: 1rem;
+      color: #717171;
 
       @media screen and (max-width: 950px) {
         text-align: center;
@@ -264,9 +272,9 @@ export default {
 
   .primaryTextTip {
     text-align: center;
-    margin: 1.5rem;
-    color: #4fe38a;
-    font-size: 0.75rem;
+    margin: 1.5rem auto;
+    color: #277547;
+    font-size: 0.9rem;
   }
 }
 </style>

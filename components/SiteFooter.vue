@@ -83,9 +83,9 @@ export default {
 .componentSiteFooter {
   margin-top: 3.5rem;
   position: relative;
-  background-color: #1e91c3;
+  background-color: #1a7ca7;
   color: #fff;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: hidden;
@@ -98,7 +98,7 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: normal;
 
     img {
@@ -131,7 +131,7 @@ export default {
     margin: 1.5rem 0 0;
     padding: 0 0 0 1rem;
     border-left: 1px solid #fff;
-    font-size: 0.6875rem;
+    font-size: 0.8rem;
 
     li {
       list-style: none;

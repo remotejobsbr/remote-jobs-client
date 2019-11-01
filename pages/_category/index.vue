@@ -3,7 +3,7 @@
     <div class="content">
       <img
         class="topImage"
-        src="~/assets/remote-jobs-header.jpg"
+        src="~/assets/remote-jobs-header.png"
         alt="Foto de fundo com homem mexendo no computador">
 
       <h1 class="pageTitle">{{ pageName }}</h1>
