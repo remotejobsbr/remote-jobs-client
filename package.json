@@ -1,7 +1,7 @@
 {
   "name": "remotejobsbr",
   "version": "1.0.0",
-  "description": "Acesse Diversas Vagas, Totalmente Grátis e Open Source. Com Remote Jobs BR, você tem acesso à vagas de trabalho remoto de várias áreas, totalmente grátis através de um repositório Open Source",
+  "description": "Acesse diversas vagas de trabalho remoto de Front-End, Back-End e Mobile sem complicações",
   "author": "Roberto Oliveira",
   "private": true,
   "scripts": {

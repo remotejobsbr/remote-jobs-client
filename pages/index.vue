@@ -17,15 +17,10 @@
           alt="Foto de fundo com homem mexendo no computador">
       </header>
       <section class="slogan-container container">
-        <h1 class="title">
-          Acesse Diversas Vagas,<br>
-          Totalmente Grátis e<br>
-          Open Source.</h1>
+        <h1 class="title">Garanta seu Trabalho<br> Remoto com <strong>Remote<br> Jobs BR</strong></h1>
 
         <p class="product-explanation">
-          Com <strong>Remote Jobs BR</strong>, você tem acesso à vagas de <strong>trabalho remoto</strong> <br>
-          de várias áreas, totalmente grátis através de um repositório <br>
-          <strong>Open Source</strong>
+          Acesse diversas vagas de <strong>trabalho remoto</strong> de<br> Front-End, Back-End e Mobile sem complicações.
         </p>
 
         <button
