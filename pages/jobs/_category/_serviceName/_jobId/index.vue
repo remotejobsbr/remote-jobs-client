@@ -32,7 +32,7 @@ export default {
     VacanciesTemplate
   },
   validate({ params }) {
-    const allowedCategories = /(frontend|backend|mobile)/
+    const allowedCategories = /(frontend|backend|mobile|qa|ux|geral)/
     return allowedCategories.test(params.category)
   },
   fetch({ store, params }) {
@@ -57,7 +57,10 @@ export default {
       return {
         frontend: 'Front-End',
         backend: 'Back-End',
-        mobile: 'Mobile'
+        mobile: 'Mobile',
+        ux: 'UX e Design',
+        qa: 'Q.A (Qualidade)',
+        geral: 'Vagas em Geral'
       }[this.$route.params.category]
     }
   },
