@@ -35,6 +35,26 @@
       src="~/assets/soujava-logo.png"
       alt="Vaga de Sou Java"
       class="logoImage">
+    <img
+      v-else-if="serviceName === 'uxbrasil'"
+      src="~/assets/uxbrasil-logo.png"
+      alt="Vaga de Ux Brasil"
+      class="logoImage">
+    <img
+      v-else-if="serviceName === 'Gommunity'"
+      src="~/assets/Gommunity-logo.png"
+      alt="Vaga de Ux Brasil"
+      class="logoImage">
+    <img
+      v-else-if="serviceName === 'flutter-brazil'"
+      src="~/assets/Flutter-Brazil-logo.png"
+      alt="Vaga de Ux Brasil"
+      class="logoImage">
+    <img
+      v-else-if="serviceName === 'vuejs-br'"
+      src="~/assets/vuejs-br-logo.jpeg"
+      alt="Vaga de Ux Brasil"
+      class="logoImage">
   </div>
 </template>
 
