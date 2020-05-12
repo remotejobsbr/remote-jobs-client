@@ -71,7 +71,7 @@ export default {
     VacanciesTemplate
   },
   validate({ params }) {
-    const allowedCategories = /(frontend|backend|mobile)/
+    const allowedCategories = /(frontend|backend|mobile|qa|ux|geral)/
     return allowedCategories.test(params.category)
   },
   fetch({ store, params }) {

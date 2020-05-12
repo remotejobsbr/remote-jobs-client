@@ -27,6 +27,22 @@
                 class="menuItem"
                 to="/backend">Back-End</nuxt-link>
             </li>
+            <li>
+              <nuxt-link
+                class="menuItem"
+                to="/ux">UX</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link
+                class="menuItem"
+                to="/qa">QA</nuxt-link>
+            </li>
+            <!-- TODO: Wait for backend feature -->
+            <!-- <li>
+              <nuxt-link
+                class="menuItem"
+                to="/geral">Outros</nuxt-link>
+            </li> -->
           </ul>
 
           <section>

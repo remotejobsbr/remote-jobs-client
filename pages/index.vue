@@ -68,7 +68,7 @@
 
             <h2>Desenvolvimento Mobile</h2>
 
-            <p>Desenvolvimento mobile para Android e IOS usando ferramentas como Java, Kotlin, Swift, React Native, etc...</p>
+            <p>Desenvolvimento mobile para Android e IOS usando ferramentas como Java, Kotlin, Flutter, Swift, React Native, etc...</p>
           </div>
         </nuxt-link>
 
@@ -92,7 +92,48 @@
 
             <h2>Desenvolvimento Back-End</h2>
 
-            <p>Desenvolvimento Back-End usando ferramentas como Java, C#, Ruby, NodeJS, Python, etc...</p>
+            <p>Desenvolvimento Back-End usando ferramentas como Java, C#, Ruby, NodeJS, Python, Go, etc...</p>
+          </div>
+        </nuxt-link>
+      </div>
+
+      <div class="jobFieldRow">
+        <nuxt-link to="/qa">
+          <div class="card jobFieldCard">
+            <img
+              src="~/assets/qa.svg"
+              alt="Mobile">
+
+            <h2>Quality Assurance (Qualidade)</h2>
+
+            <p>Vagas de planejamento e execução de testes, validação de análise de requisitos, automatização de testes, etc...</p>
+          </div>
+        </nuxt-link>
+
+        <!-- TODO wait for backend support -->
+        <!-- <nuxt-link to="/geral"> -->
+        <a>
+          <div class="card jobFieldCard soon">
+            <img
+              src="~/assets/geral.svg"
+              alt="Mobile">
+
+            <h2>Vagas em Geral</h2>
+
+            <p>Diversas vagas que suportam home office, como contabilidade, administração, ensino, etc...</p>
+          </div>
+        </a>
+        <!-- </nuxt-link> -->
+
+        <nuxt-link to="/ux">
+          <div class="card jobFieldCard">
+            <img
+              src="~/assets/ux.svg"
+              alt="Mobile">
+
+            <h2>UI/UX</h2>
+
+            <p>Desenvolvimento da experiência do usuário e planejamento do design, vagas de UI Design e planejamento de UX...</p>
           </div>
         </nuxt-link>
       </div>
@@ -214,7 +255,11 @@ export default {
   }
 
   .jobFieldRow {
-    margin-top: 5.75rem;
+    margin-top: 2.75rem;
+
+    &:first-of-type {
+      margin-top: 5.75rem;
+    }
 
     @media screen and (min-width: 950px) {
       display: flex;
@@ -270,6 +315,25 @@ export default {
     margin: 1.5rem auto;
     color: #277547;
     font-size: 0.9rem;
+  }
+
+  .soon {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: 'Em Breve';
+      text-align: center;
+      padding: 3.5rem;
+      font-size: 2rem;
+      color: #fff;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+    }
   }
 }
 </style>
