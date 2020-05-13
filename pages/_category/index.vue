@@ -1,27 +1,38 @@
 <template>
-  <vacancies-template class="pageCategory">
+  <vacancies-template class="page-category">
     <div class="content">
       <img
-        class="topImage"
+        class="top-image"
         src="~/assets/remote-jobs-header.png"
         alt="Foto de fundo com homem mexendo no computador">
 
-      <h1 class="pageTitle">{{ pageName }}</h1>
+      <h1 class="page-title">{{ pageName }}</h1>
 
       <div v-if="!vacancies">
-        <vacancy-card-placeholder class="vacancyContainer" />
-        <vacancy-card-placeholder class="vacancyContainer" />
-        <vacancy-card-placeholder class="vacancyContainer" />
+        <vacancy-card-placeholder class="vacancy-container" />
+        <vacancy-card-placeholder class="vacancy-container" />
+        <vacancy-card-placeholder class="vacancy-container" />
       </div>
-      <div v-else>
+      <div v-else-if="!!vacancies && hasVacancy">
         <nuxt-link
           v-for="vacancy in vacancies"
           :key="vacancy.id"
           :to="`/jobs/${$route.params.category}/${vacancy.service_name}/${vacancy.number}`">
           <vacancy-card
             :vacancy="vacancy"
-            class="vacancyCard"/>
+            class="vacancy-card"/>
         </nuxt-link>
+      </div>
+      <div v-else>
+        <div class="empty-state">
+          <img
+            src="~/assets/empty-state.svg"
+            alt="Mobile">
+
+          <p class="empty-state-main-message">Ainda não temos vagas :(</p>
+
+          <p>Mas não se preocupe, estamos trabalhando para encher esse feed!</p>
+        </div>
       </div>
     </div>
   </vacancies-template>
@@ -82,6 +93,12 @@ export default {
     vacancies() {
       return this.$store.state.jobs[this.$route.params.category]
     },
+    hasVacancy() {
+      const vacancies =
+        this.$store.state.jobs[this.$route.params.category] || []
+
+      return vacancies.length > 0
+    },
     pageName() {
       return {
         frontend: 'Front-End',
@@ -101,7 +118,7 @@ export default {
 </script>
 
 <style lang="scss">
-.pageCategory {
+.page-category {
   .content {
     margin-top: 70px;
     flex: 1;
@@ -111,7 +128,7 @@ export default {
     }
   }
 
-  .topImage {
+  .top-image {
     position: absolute;
     right: 0;
     top: 0;
@@ -124,19 +141,37 @@ export default {
     }
   }
 
-  .pageTitle {
+  .page-title {
     color: #4d4d4d;
     text-align: center;
     font-size: 1.87rem;
     margin-bottom: 2rem;
   }
 
-  .vacancyContainer {
+  .vacancy-container {
     margin-bottom: 2rem;
   }
 
-  .vacancyCard {
+  .vacancy-card {
     margin-bottom: 1.8rem;
+  }
+
+  .empty-state {
+    text-align: center;
+
+    @media screen and (min-width: 979px) {
+      margin-top: -10.5rem;
+      margin-left: -5rem;
+    }
+
+    img {
+      width: 300px;
+      max-width: 80%;
+    }
+
+    .empty-state-main-message {
+      font-size: 2em;
+    }
   }
 }
 </style>

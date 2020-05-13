@@ -37,12 +37,11 @@
                 class="menuItem"
                 to="/qa">QA</nuxt-link>
             </li>
-            <!-- TODO: Wait for backend feature -->
-            <!-- <li>
+            <li>
               <nuxt-link
                 class="menuItem"
-                to="/geral">Outros</nuxt-link>
-            </li> -->
+                to="/geral">Vagas em Geral</nuxt-link>
+            </li>
           </ul>
 
           <section>

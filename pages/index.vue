@@ -111,9 +111,8 @@
         </nuxt-link>
 
         <!-- TODO wait for backend support -->
-        <!-- <nuxt-link to="/geral"> -->
-        <a>
-          <div class="card jobFieldCard soon">
+        <nuxt-link to="/geral">
+          <div class="card jobFieldCard">
             <img
               src="~/assets/geral.svg"
               alt="Mobile">
@@ -122,8 +121,7 @@
 
             <p>Diversas vagas que suportam home office, como contabilidade, administração, ensino, etc...</p>
           </div>
-        </a>
-        <!-- </nuxt-link> -->
+        </nuxt-link>
 
         <nuxt-link to="/ux">
           <div class="card jobFieldCard">
